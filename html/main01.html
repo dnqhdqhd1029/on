@@ -81,40 +81,30 @@
     <main>
       <section class="key-wrap">
 
-        <div class="key-title">
-          <div>실시간 이슈 키워드</div>
-          <div>
-            <ol>
-              <li><em>01</em><span>무도한 도발 중단하라</span></li>
-              <li><em>02</em><span>무도한 도발 중단하라</span></li>
-              <li><em>03</em><span>무도한 도발 중단하라</span></li>
-              <li><em>04</em><span>무도한 도발 중단하라</span></li>
-            </ol>
+        <div class="key-title" id="keyTitle">
+          <div class="tit">실시간 이슈 키워드</div>
+          <div class="list">
+            <em>1</em><span>무도한 도발 중단하라</span>
           </div>
-          <div class="btn">
-            <button>열기</button>
+          <div class="btn" >
+            <button onclick="openKey();" id="openKeyBtn">열기</button>
           </div>
         </div>
         <!--key-title-->
-        <div class="key-cont">
-          <dl>
-            <dt>실시간 이슈 키워드</dt>
-            <dd>
-              <ol>
-                <li><em>01</em><span>무도한 도발 중단하라</span></li>
-                <li><em>02</em><span>무도한 도발 중단하라</span></li>
-                <li><em>03</em><span>무도한 도발 중단하라</span></li>
-                <li><em>04</em><span>무도한 도발 중단하라</span></li>
-                <li><em>05</em><span>무도한 도발 중단하라</span></li>
-                <li><em>06</em><span>무도한 도발 중단하라</span></li>
-                <li><em>07</em><span>무도한 도발 중단하라</span></li>
-                <li><em>08</em><span>무도한 도발 중단하라</span></li>
-                <li><em>09</em><span>무도한 도발 중단하라</span></li>
-                <li><em>10</em><span>무도한 도발 중단하라</span></li>
-              </ol>
-            </dd>
-          </dl>
-          <button class="close">닫기</button>
+        <div class="key-cont" id="openKeyCont" >
+          <ol>
+            <li><em>1</em><span>무도한 도발 중단하라</span></li>
+            <li><em>2</em><span>무도한 도발 중단하라</span></li>
+            <li><em>3</em><span>무도한 도발 중단하라</span></li>
+            <li><em>4</em><span>무도한 도발 중단하라</span></li>
+            <li><em>5</em><span>무도한 도발 중단하라</span></li>
+            <li><em>6</em><span>무도한 도발 중단하라</span></li>
+            <li><em>7</em><span>무도한 도발 중단하라</span></li>
+            <li><em>8</em><span>무도한 도발 중단하라</span></li>
+            <li><em>9</em><span>무도한 도발 중단하라</span></li>
+            <li><em>10</em><span>무도한 도발 중단하라</span></li>
+          </ol>
+          <button class="close" onclick="closeKey();">닫기</button>
         </div>
 
       </section>
@@ -122,16 +112,17 @@
       <section class="banner-wrap">
         <button><img src="../images/img-banner-01.png" alt="" /></button>
       </section>
-      <section class="article-wrap">
-        <h2 class="title">펜팔 주간베스트</h2>
-        <button type="button" class="more">더보기</button>
+      <section class="penpal-wrap">
+        <h2 class="title">펜팔 주간베스트 <button type="button" class="more">더보기</button></h2>
+        
         <ol>
           <li><em class="ic-num01"></em><span>의정부시장 “모든 행정 수단 동원, 김근식 의정부의정부시장 “모든 행정 수단 동원, 김근식 의정부</span></li>
           <li><em class="ic-num02"></em><span>의정부시장 “모든 행정 수단 동원, 김근식 의정부의정부시장 “모든 행정 수단 동원, 김근식 의정부</span></li>
           <li><em class="ic-num03"></em><span>의정부시장 “모든 행정 수단 동원, 김근식 의정부의정부시장 “모든 행정 수단 동원, 김근식 의정부</span></li>
         </ol>
-        <ul>
-          <li>
+        <div class="penpal-cont">
+          <div class="cont">
+
             <button type="button">
               <div class="photo">
                 <img src="https://m2.nateimg.co.kr/news/artc/1654739784_596.png" alt="" />
@@ -140,11 +131,12 @@
                 <div class="tit">
                   우산으로 얼굴 가린 김주현 금융위원장 후보자 출근길 논란우산으로 얼굴 가린 김주현 금융위원장 후보자 출근길 논란
                 </div>
-
+  
               </div>
             </button>
-          </li>
-          <li>
+          </div>
+          <div class="cont">
+
             <button type="button">
               <div class="photo">
                 <img src="https://m2.nateimg.co.kr/news/artc/1654739784_596.png" alt="" />
@@ -153,11 +145,12 @@
                 <div class="tit">
                   우산으로 얼굴 가린 김주현 금융위원장 후보자 출근길 논란우산으로 얼굴 가린 김주현 금융위원장 후보자 출근길 논란
                 </div>
-
+  
               </div>
             </button>
-          </li>
-          <li>
+          </div>
+          <div class="cont">
+
             <button type="button">
               <div class="photo">
                 <img src="https://m2.nateimg.co.kr/news/artc/1654739784_596.png" alt="" />
@@ -166,11 +159,12 @@
                 <div class="tit">
                   우산으로 얼굴 가린 김주현 금융위원장 후보자 출근길 논란우산으로 얼굴 가린 김주현 금융위원장 후보자 출근길 논란
                 </div>
-
+  
               </div>
             </button>
-          </li>
-          <li>
+          </div>
+          <div class="cont">
+
             <button type="button">
               <div class="photo">
                 <img src="https://m2.nateimg.co.kr/news/artc/1654739784_596.png" alt="" />
@@ -179,12 +173,14 @@
                 <div class="tit">
                   우산으로 얼굴 가린 김주현 금융위원장 후보자 출근길 논란우산으로 얼굴 가린 김주현 금융위원장 후보자 출근길 논란
                 </div>
-
+  
               </div>
             </button>
-          </li>
-
-        </ul>
+          </div>
+          
+          
+        </div>
+        
         <div class="share-cont">
           <button><i class="ic-share"></i>공유하기</button>
           <button><i class="ic-like"></i>좋아요 1.4천</button>
@@ -212,121 +208,34 @@
         <div class="uplode-title">
           <img src="../images/img-uplode.png" alt="우리를 위한 진짜 뉴스" />
         </div>
-        <h2 class="title">업로드된 뉴스</h2>
-        <button type="button" class="more">더보기</button>
+        <h2 class="title">업로드된 뉴스 <button type="button" class="more">더보기</button></h2>
 
-        <div class="uolode-cont">
+        <div class="uplode-cont">
           <ul>
             <li>
               <button type="button">
-                <div class="photo">
-                  <img src="https://m2.nateimg.co.kr/news/artc/1654739784_596.png" alt="" />
-                </div>
-                <dl>
-                  <dt>
-                    <div class="txt">
+                <div class="cont">
+                  <div class="photo">
+                    <img src="https://m2.nateimg.co.kr/news/artc/1654739784_596.png" alt="" />
+                  </div>
+                  <dl>
+                    <dt>
                       유엔 진실·정의 특별보고관 만난 이용수 할머니유엔 진실·정의
-                      특별보고관 만난 이용수 할머니
-                    </div>
-                  </dt>
-                  <dd>
-                    <div class="share-cont">
-                      <button><i class="ic-share"></i>공유하기</button>
-                      <button><i class="ic-like"></i>좋아요 1.4천</button>
-                    </div>
-                  </dd>
-                </dl>
+                      특별보고관 만난 이용수 할머니유엔 진실·정의 특별보고관 만난 이용수 할머니유엔 진실·정의
+                      특별보고관 만난 이용수 할머니 
+                    </dt>
+                    
 
+                  </dl>
+                  <div class="share-cont">
+                    <button><i class="ic-share"></i>공유하기</button>
+                    <button><i class="ic-like"></i>좋아요 1.4천</button>
+                  </div>
+                </div>
+                
               </button>
             </li>
-            <li>
-              <button type="button">
-                <div class="photo">
-                  <img src="https://m2.nateimg.co.kr/news/artc/1654739784_596.png" alt="" />
-                </div>
-                <dl>
-                  <dt>
-                    <div class="txt">
-                      유엔 진실·정의 특별보고관 만난 이용수 할머니유엔 진실·정의
-                      특별보고관 만난 이용수 할머니
-                    </div>
-                  </dt>
-                  <dd>
-                    <div class="share-cont">
-                      <button><i class="ic-share"></i>공유하기</button>
-                      <button><i class="ic-like"></i>좋아요 1.4천</button>
-                    </div>
-                  </dd>
-                </dl>
-
-              </button>
-            </li>
-            <li>
-              <button type="button">
-                <div class="photo">
-                  <img src="https://m2.nateimg.co.kr/news/artc/1654739784_596.png" alt="" />
-                </div>
-                <dl>
-                  <dt>
-                    <div class="txt">
-                      유엔 진실·정의 특별보고관 만난 이용수 할머니유엔 진실·정의
-                      특별보고관 만난 이용수 할머니
-                    </div>
-                  </dt>
-                  <dd>
-                    <div class="share-cont">
-                      <button><i class="ic-share"></i>공유하기</button>
-                      <button><i class="ic-like"></i>좋아요 1.4천</button>
-                    </div>
-                  </dd>
-                </dl>
-
-              </button>
-            </li>
-            <li>
-              <button type="button">
-                <div class="photo">
-                  <img src="https://m2.nateimg.co.kr/news/artc/1654739784_596.png" alt="" />
-                </div>
-                <dl>
-                  <dt>
-                    <div class="txt">
-                      유엔 진실·정의 특별보고관 만난 이용수 할머니유엔 진실·정의
-                      특별보고관 만난 이용수 할머니
-                    </div>
-                  </dt>
-                  <dd>
-                    <div class="share-cont">
-                      <button><i class="ic-share"></i>공유하기</button>
-                      <button><i class="ic-like"></i>좋아요 1.4천</button>
-                    </div>
-                  </dd>
-                </dl>
-
-              </button>
-            </li>
-            <li>
-              <button type="button">
-                <div class="photo">
-                  <img src="https://m2.nateimg.co.kr/news/artc/1654739784_596.png" alt="" />
-                </div>
-                <dl>
-                  <dt>
-                    <div class="txt">
-                      유엔 진실·정의 특별보고관 만난 이용수 할머니유엔 진실·정의
-                      특별보고관 만난 이용수 할머니
-                    </div>
-                  </dt>
-                  <dd>
-                    <div class="share-cont">
-                      <button><i class="ic-share"></i>공유하기</button>
-                      <button><i class="ic-like"></i>좋아요 1.4천</button>
-                    </div>
-                  </dd>
-                </dl>
-
-              </button>
-            </li>
+           
           </ul>
         </div>
       </section>
@@ -337,79 +246,24 @@
       </section>
 
       <section class="tv-wrap">
-        <h2 class="title">펜팔 주간베스트</h2>
-        <button type="button" class="more">더보기</button>
-        <ul>
-          <li>
-            <button type="button">
-              <div class="photo">
-                <img src="../images/img-banner-03.png" alt="" />
-              </div>
-              <dl>
-                <dt>
-                  <div class="txt">
-                    유엔 진실·정의 특별보고관 만난 이용수 할머니유엔 진실·정의
-                    특별보고관 만난 이용수 할머니유엔 진실·정의 특별보고관 만난 이용수 할머니유엔 진실·정의
-                    특별보고관 만난 이용수 할머니
-                  </div>
-                </dt>
-                <dd>
-                  <div class="share-cont">
-                    <button><i class="ic-share"></i>공유하기</button>
-                    <button><i class="ic-like"></i>좋아요 1.4천</button>
-                  </div>
-                </dd>
-              </dl>
-
-            </button>
-          </li>
-          <li>
-            <button type="button">
-              <div class="photo">
-                <img src="../images/img-banner-03.png" alt="" />
-              </div>
-              <dl>
-                <dt>
-                  <div class="txt">
-                    유엔 진실·정의 특별보고관 만난 이용수 할머니유엔 진실·정의
-                    특별보고관 만난 이용수 할머니유엔 진실·정의 특별보고관 만난 이용수 할머니유엔 진실·정의
-                    특별보고관 만난 이용수 할머니
-                  </div>
-                </dt>
-                <dd>
-                  <div class="share-cont">
-                    <button><i class="ic-share"></i>공유하기</button>
-                    <button><i class="ic-like"></i>좋아요 1.4천</button>
-                  </div>
-                </dd>
-              </dl>
-
-            </button>
-          </li>
-          <li>
-            <button type="button">
-              <div class="photo">
-                <img src="../images/img-banner-03.png" alt="" />
-              </div>
-              <dl>
-                <dt>
-                  <div class="txt">
-                    유엔 진실·정의 특별보고관 만난 이용수 할머니유엔 진실·정의
-                    특별보고관 만난 이용수 할머니유엔 진실·정의 특별보고관 만난 이용수 할머니유엔 진실·정의
-                    특별보고관 만난 이용수 할머니
-                  </div>
-                </dt>
-                <dd>
-                  <div class="share-cont">
-                    <button><i class="ic-share"></i>공유하기</button>
-                    <button><i class="ic-like"></i>좋아요 1.4천</button>
-                  </div>
-                </dd>
-              </dl>
-
-            </button>
-          </li>
-        </ul>
+        <h2 class="title">펜팔 주간베스트 <button type="button" class="more">더보기</button></h2>
+        
+        <div class="cont">
+          <button type="button">
+            <div class="photo">
+              <img src="../images/img-banner-03.png" alt="" />
+            </div>
+            <div class="txt">
+              유엔 진실·정의 특별보고관 만난 이용수 할머니유엔 진실·정의
+              특별보고관 만난 이용수 할머니유엔 진실·정의 특별보고관 만난 이용수 할머니유엔 진실·정의
+              특별보고관 만난 이용수 할머니
+            </div>
+            <div class="share-cont">
+              <button><i class="ic-share"></i>공유하기</button>
+              <button><i class="ic-like"></i>좋아요 1.4천</button>
+            </div>
+          </button>
+        </div><!--//cont-->
       </section>
 
       <section class="penpla-wrap">

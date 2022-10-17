@@ -40,3 +40,29 @@ function closeNav() {
   }, 100);
   var element1 = (document.style.display = "none");
 }
+
+
+function openNav() {
+  var element = document.getElementById("mySidepanel");
+  var element2 = document.getElementById("left-menu");
+  $("#mySidepanel").css("z-index", 1);
+  element.classList.add("on");
+  element2.classList.add("on");
+}
+
+//실시간이슈키워드
+
+function openKey() {
+  document.getElementById("openKeyCont").classList.toggle("show");
+  document.getElementById("openKeyBtn").classList.toggle("up");;
+  document.getElementById("keyTitle").classList.toggle("up");
+  
+  
+}
+
+function closeKey() {
+  document.getElementById("openKeyCont").classList.toggle("show");
+  document.getElementById("openKeyBtn").classList.toggle("up");;
+  document.getElementById("keyTitle").classList.toggle("up");
+  
+}
