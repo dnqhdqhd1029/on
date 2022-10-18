@@ -13,13 +13,30 @@
 // }
 // });
 
+$(document).ready(function(){
+  // resize 이벤트가 발생할때마다 사이즈를 조절합니다.
+  $(window).resize(resizeContents);
+  // 처음 페이지가 뜰때 사이즈 조정 부분 입니다.
+  resizeContents();
+});
+
+
+
+// 메뉴와 컨텐츠의 높이를 윈도우 높이에서 헤더 부분을 뺀 크기로 지정합니다.
+
+function resizeContents() {
+  $("#wrap").height($(window).height()-80);
+  //$("#contents").height($(window).height()-50);
+
+}
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementsByName("header").style.top = "0";
+    document.getElementById("header").style.top = "0";
   } else {
-    document.getElementsByName("header").style.top = "-50px";
+    document.getElementById("header").style.top = "-50px";
   }
 }
 
