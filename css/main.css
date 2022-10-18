@@ -76,9 +76,8 @@ header h1 {
   /* padding: 0 10px; */
   margin: 10px 10px;
   height: 50px;
-  border-radius: 50%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   border: 3px solid transparent;
   border-radius: 5px;
@@ -89,8 +88,10 @@ header h1 {
 }
 .search-wrap input[type="search"] {
   height: 35px;
-  border: none;
+  border: 1px solid red;
   flex: 1;
+  appearance: none;
+  background: none;
 }
 .search-wrap input[type="search"]:focus {
   border: none;
