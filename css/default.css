@@ -205,6 +205,7 @@ button {
   cursor: pointer;
   box-sizing: border-box;
   word-spacing: -6px;
+  color: inherit;
 }
 /*button,[type="button"],[type="reset"],[type="submit"]{background-color:transparent;cursor: pointer;}*/
 select {
