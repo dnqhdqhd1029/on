@@ -75,7 +75,7 @@ header h1 {
   border-image-slice: 1; */
   /* padding: 0 10px; */
   margin: 10px 10px;
-  padding: 0 10px;
+  padding: 0 0;
   height: 50px;
   display: flex;
   justify-content: space-between;
@@ -93,6 +93,7 @@ header h1 {
   flex: 1;
   appearance: none;
   background: none;
+  margin-left: 5px;
 }
 .search-wrap input[type="search"]:focus {
   border: none;
@@ -106,6 +107,7 @@ header h1 {
   font-size: 0;
   background: url(../images/ic-search.png) center center no-repeat;
   background-size: 30px;
+  margin-right: 5px;
 }
 
 .sidepanel {
