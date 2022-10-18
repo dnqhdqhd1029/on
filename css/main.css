@@ -403,14 +403,14 @@ footer {
   justify-content: space-between;
   align-content: center;
   height: 80px;
-  padding: 0 20px;
+  padding: 0 10px;
   box-shadow: 0px -4px 13px 0 rgba(4, 0, 0, 0.1);
 }
 footer.fixed {
   clear: both;
   display: flex;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
   height: 80px;
   padding: 0 20px;
   position: fixed;
@@ -425,6 +425,7 @@ footer button {
   justify-content: center;
   align-items: center;
   text-align: center;
+  flex: 1;
 }
 footer button i {
   width: 40px;
@@ -455,6 +456,14 @@ footer button.mall i {
 footer button.mypage i {
   background: url(../images/ic-foot-05.png) center center no-repeat;
   background-size: 40px;
+}
+footer button.add{
+  width: 80px;
+  height: 80px;
+}
+footer button.add i {
+  background: url(../images/ic-plus.png) center center no-repeat;
+  background-size: 50px;
 }
 
 /*MAIN*/
@@ -607,7 +616,7 @@ main{
 /*penpal-wrap*/
 section.penpal-wrap{
   background-color: #fff;
-  padding: 20px 10px;
+  padding: 10px 10px;
   margin-bottom: 10px;
 }
 section.penpal-wrap ol{
@@ -739,9 +748,9 @@ section.penpal-wrap .share-cont button .ic-like{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 8px solid #eee;
   background-color: #fff;
   font-size: 13px;
+  margin-bottom: 10px;
 }
 .weather-wrap > div {
   height: 40px;
@@ -768,40 +777,52 @@ section.penpal-wrap .share-cont button .ic-like{
 
 /*upload-wrap*/
 .upload-wrap{
-  border: 1px solid red;
   background-color: #fff;
   margin-bottom: 10px;
-  padding: 20px 10px;
+  padding: 10px 10px;
 }
 
 .uplode-title img{
   max-width: 100%;
 }
 
-.uplode-cont ul li > button{
- 
-  border: 1px solid #000;
-}
-.uplode-cont ul li button .cont{
+
+.uplode-cont .cont{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid #ebebeb;
 }
-.uplode-cont ul li button .cont .photo{
-  width: 130px;
-  height: 100px;
+.uplode-cont .cont:last-child{
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.uplode-cont .cont .photo{
+  width: 120px;
+  height: 90px;
   margin-right: 10px;
 }
-.uplode-cont ul li button .cont .photo img{
+.uplode-cont .cont .photo button{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.uplode-cont .cont .photo img{
   max-width: 100%;
 }
-.uplode-cont ul li button .cont dl{
+.uplode-cont .cont div.text{
   flex: 1;
-  border: 1px solid red;
-  height: 100px;
-  
+  display: flex;
+  height: 90px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
 }
-.uplode-cont ul li button .cont dt{
+
+.uplode-cont .cont .text .txt{
   text-align: left;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -815,73 +836,77 @@ section.penpal-wrap .share-cont button .ic-like{
 }
 
 
-.uplode-cont dd .share-cont{
+.uplode-cont .cont .share-cont{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  height: 40px;
-  border: 1px solid red;
+  height: 30px;
 }
-.uplode-cont dd .share-cont button{
+.uplode-cont .cont .share-cont button{
   width: 100%;
+  flex: 1;
   text-align: center;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  font-size: 14px; 
+  font-size: 12px;
+  letter-spacing: -1px;
   color: #666;
 }
-.uplode-cont dd .share-cont button:first-child{
+.uplode-cont .cont .share-cont button:first-child{
   background: url(../images/ic-line-01.png) right center no-repeat;
   background-size: 1px 25px;
-}
-.uplode-cont dd .share-cont button .ic-share{
-  background: url(../images/ic-share01.png) center center no-repeat;
-  width: 25px;
-  height: 25px;
-  background-size: contain;
   margin-right: 10px;
+}
+.uplode-cont .cont .share-cont button .ic-share{
+  background: url(../images/ic-share01.png) center center no-repeat;
+  width: 18px;
+  height: 18px;
+  background-size: contain;
+  margin-right: 3px;
 }
 
-.uplode-cont dd .share-cont button .ic-like{
+.uplode-cont .cont .share-cont button .ic-like{
   background: url(../images/ic-hart-on.png) center center no-repeat;
-  width: 25px;
-  height: 25px;
+  width: 18px;
+  height: 18px;
   background-size: contain;
-  margin-right: 10px;
+  margin-right: 3px;
 }
 
 
 /*tv-wrap*/
 .tv-wrap{
-  padding: 20px 10px;
-  background-color: #fff;
-  border: 1px solid red;
+  padding: 10px 10px;
+  background-color: #fff;s
   margin-bottom: 10px;
 }
 
 .tv-wrap .cont{
   width:100%;
+  margin-bottom: 10px;
  }
- .tv-wrap .cont:nth-child(odd){
-   margin-right: 10px;
- }
- .tv-wrap .cont button{
-   width: 100%;
- }
+
+
  
- .tv-wrap .cont button .photo {
+ .tv-wrap .cont  .photo {
    width: 100%;
-   height: auto;
    margin-bottom: 10px;
+   height: auto;
  }
- .tv-wrap .cont button .photo img {
+
+.tv-wrap .cont .photo button{
+  width: 100%;
+  height: 100%;
+}
+
+ .tv-wrap .cont  .photo img {
    width: 100%;
-   height: 100%;
+   height: 100%;s
  }
  
- .tv-wrap .cont button .txt .tit {
+ .tv-wrap .cont .txt {
    overflow: hidden;
    text-overflow: ellipsis;
    width: 100%;
@@ -931,4 +956,102 @@ section.penpal-wrap .share-cont button .ic-like{
    background-size: contain;
    margin-right: 10px;
  }
+
+ /*penpla-wrap*/
+.penpla-wrap{
+  background: #fff;
+  padding: 20px 10px;
+}
+.penpla-wrap h2{
+  font-size: 26px;
+  color: #000;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+  word-spacing: -5px;
+}
+.penpla-wrap h2 span{
+  position: relative;
+  z-index: 3;
+}
+.penpla-wrap h2 span:after{
+  content:"";
+  width: 100%;
+  height: 10px;
+  background-color:#ff918e ;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.penpla-wrap ol li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+
+  border-bottom: 1px solid #ebebeb;
+}
+.penpla-wrap ol li:last-child{
+  border-bottom: none;
+}
+
+.penpla-wrap ol li div:first-child{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90px;
+}
+.penpla-wrap ol li div:last-child{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+.penpla-wrap ol li .num{
+  width: 45px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.penpla-wrap ol li .num img{
+  max-width: 100%;
+}
+.penpla-wrap ol li .img{
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.penpla-wrap ol li .img img{
+  width: 100%;
+  height: 100%;
+}
+.penpla-wrap ol li .title{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 70%;
+  height: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 20px;
+}
+.penpla-wrap .more{
+  border: 3px solid transparent;
+  border-radius: 50%;
+  border-image: linear-gradient(to right, #e5302c 0%, #2583cb 100%);
+  border-image-slice: 1;
+  height: 40px;
+  margin: 20px 0;
+}
+.penpla-wrap .more button{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
  
