@@ -36,19 +36,12 @@ function closeNav() {
   element.classList.remove("on");
   element2.classList.remove("on");
   setTimeout(function () {
-    $("#mySidepanel").css("z-index", -1);
+    $("#mySidepanel").css("z-index", 200);
   }, 100);
   var element1 = (document.style.display = "none");
 }
 
 
-function openNav() {
-  var element = document.getElementById("mySidepanel");
-  var element2 = document.getElementById("left-menu");
-  $("#mySidepanel").css("z-index", 1);
-  element.classList.add("on");
-  element2.classList.add("on");
-}
 
 //실시간이슈키워드
 
