@@ -69,7 +69,7 @@ function closeNav() {
   setTimeout(function () {
     $("#mySidepanel").css("z-index", -1);
   }, 100);
-  var element1 = (document.style.display = "none");
+  //var element1 = (document.style.display = "none");
 }
 
 
