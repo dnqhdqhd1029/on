@@ -26,6 +26,7 @@ body {
 
 body{
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 #wrap {
   height: calc(100vh - 80px);
