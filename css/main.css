@@ -89,11 +89,12 @@ header h1 {
 }
 .search-wrap input[type="search"] {
   height: 35px;
-  border: 1px solid red;
+  border: none;
   flex: 1;
   appearance: none;
   background: none;
   margin-left: 5px;
+  margin-right: 5px;
 }
 .search-wrap input[type="search"]:focus {
   border: none;
