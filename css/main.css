@@ -30,7 +30,7 @@ body{
 #wrap {
   height: calc(100vh - 80px);
   overflow-y: auto;
-  border: 1px solid red;
+  border: 1px solid #000;
 }
 
 header {
@@ -535,6 +535,7 @@ main{
 }
 .key-wrap .key-title .list span{
   width: 60%;
+  height: 24px;
   margin-left: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
