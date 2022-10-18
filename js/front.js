@@ -1,12 +1,26 @@
-function Headerfixed() {
-  var menu = $("header").offset();
-  $(window).scroll(function () {
-    if ($(document).scrollTop() > menu.top) {
-      $("header").addClass("fixed");
-    } else {
-      $("header").removeClass("fixed");
-    }
-  });
+// $(function(){
+//   Headerfixed();
+//
+// function Headerfixed() {
+//   var menu = $("header").offset();
+//   $(window).scroll(function () {
+//     if ($(document).scrollTop() > menu.top) {
+//       $("header").addClass("fixed");
+//     } else {
+//       $("header").removeClass("fixed");
+//     }
+//   });
+// }
+// });
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementsByName("header").style.top = "0";
+  } else {
+    document.getElementsByName("header").style.top = "-50px";
+  }
 }
 
 // //mySidepanel 사이드메뉴
@@ -36,7 +50,7 @@ function closeNav() {
   element.classList.remove("on");
   element2.classList.remove("on");
   setTimeout(function () {
-    $("#mySidepanel").css("z-index", 200);
+    $("#mySidepanel").css("z-index", -1);
   }, 100);
   var element1 = (document.style.display = "none");
 }
