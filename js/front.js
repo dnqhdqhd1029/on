@@ -22,7 +22,7 @@ function Headerfixed() {
 function openNav() {
   var element = document.getElementById("mySidepanel");
   var element2 = document.getElementById("left-menu");
-  $("#mySidepanel").css("z-index", 1);
+  $("#mySidepanel").css("z-index", 200);
   element.classList.add("on");
   element2.classList.add("on");
 }
