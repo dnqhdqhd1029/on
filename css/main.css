@@ -371,18 +371,24 @@ header h1 {
 }
 
 .nav-wrap nav {
-  display: inline-flex;
-  justify-content: start;
+  display: flex;
+  justify-content: center;
   align-items: center;
   height: 40px;
   border-bottom: 1px solid #dcdcdc;
   width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 0 10px;
 }
 
 .nav-wrap button {
   font-weight: 600;
-  flex: 1;
-  width: 20%;
+  /*flex: 1;*/
+  min-width: 20%;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
 }
 .nav-wrap nav button.on {
   color: #e52d29;
@@ -1103,11 +1109,13 @@ section.penpal-wrap .share-cont button .ic-like{
   width: 100%;
   height: 100%;s
 }
-
+.mybook-wrap .cont .text{
+  position: relative;
+}
 .mybook-wrap .cont .txt {
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 100%;
+  width: 88%;
   height: 40px;
   display: -webkit-box;
   -webkit-line-clamp: 2; /* 라인수 */
@@ -1117,6 +1125,18 @@ section.penpal-wrap .share-cont button .ic-like{
   text-align: left;
   margin-bottom: 10px;
   font-weight: 500;
+
+
+}
+.mybook-wrap .cont .text button.more{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #fff url("../images/ic-more.png") right -5px no-repeat;
+  background-size: auto 30px;
+  font-size: 0;
 }
 
 .mybook-wrap .share-cont{
@@ -1135,10 +1155,7 @@ section.penpal-wrap .share-cont button .ic-like{
   font-size: 14px;
   color: #666;
 }
-.mybook-wrap .share-cont button:first-child{
-  background: url(../images/ic-line-01.png) right center no-repeat;
-  background-size: 1px 25px;
-}
+
 .mybook-wrap .share-cont button .ic-share{
   background: url(../images/ic-share01.png) center center no-repeat;
   width: 25px;
@@ -1154,29 +1171,185 @@ section.penpal-wrap .share-cont button .ic-like{
   background-size: contain;
   margin-right: 10px;
 }
-.mybook-wrap .etc {
+.mybook-wrap .etc-cont {
   font-size: 14px;
   color: #666;
 
 }
-.mybook-wrap .etc i {
+.mybook-wrap .etc-cont i {
   vertical-align: sub;
   width: 24px;
   height: 24px;
   margin-right: 10px;
 }
 
-.mybook-wrap  .etc span.view i {
+.mybook-wrap  .etc-cont span.view i {
   background: url(../images/ic-eye.png) center center no-repeat;
   background-size: 24px;
 }
-.mybook-wrap  .etc span.comment i {
+.mybook-wrap  .etc-cont span.comment i {
   background: url(../images/ic-comen.png) center center no-repeat;
   background-size: 24px;
 }
-.mybook-wrap  .etc span.like i {
+.mybook-wrap  .etc-cont span.like i {
   background: url(../images/ic-like-xs.png) center center no-repeat;
   background-size: 24px;
 }
+.mybook-wrap .flex-justify .share-cont button{
+  font-size: 14px;
+}
+.mybook-wrap .flex-justify .share-cont button .ic-share{
+  background: url(../images/ic-share01.png) center center no-repeat;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  margin-right: 5px;
+}
 
+/*mybook-list*/
+.mybook-list{
+  width: 100%;
+  height: 110px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background-color: #fff;
+}
+.mybook-list .list{
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  position: relative;
+  padding: 0 10px;
+
+}
+.mybook-list .list div{
+  width: 60px;
+  height: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.mybook-list .list button{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+
+}
+.mybook-list .list button img{
+  width: 100%;
+  height: 100%;
+}
+.mybook-list .list div span{
+  display: block;
+  font-size: 12px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 18px;
+}
+.mybook-list .btn-all{
+  width:50px ;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #185fc3;
+  font-size: 14px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #fff;
+}
+
+/*modal-cont*/
+.modal-cont{
+  display: none;
+  max-width: 100%;
+  min-height: 100px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 9.6px 6.4px rgba(0, 0, 0, 0.21);
+  border: solid 1px #5e5e5e;
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 90px;
+  z-index: 100;
+  padding: 10px;
+  margin: 0 20px;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.2s;
+  animation-name: slideIn;
+  animation-duration: 0.2s
+}
+.modal-cont .cont{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*position: fixed;*/
+  /*left: 50%;*/
+  /*top: 50%;*/
+  /*transform: translate(-50%, -50%);*/
+  /*border: 1px solid red;*/
+}
+.modal-cont .cont button{
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.modal-cont .cont button span.img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow:hidden;
+  margin-right: 10px;
+
+}
+.modal-cont .cont button span.img img{
+  width: 100%;
+  height: 100%;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
  
