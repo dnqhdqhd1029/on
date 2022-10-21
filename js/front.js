@@ -25,7 +25,7 @@ $(document).ready(function(){
 // 메뉴와 컨텐츠의 높이를 윈도우 높이에서 헤더 부분을 뺀 크기로 지정합니다.
 
 function resizeContents() {
-  $("#wrap").height($(window).height()-80);
+  //$("#wrap").height($(window).height()-80);
   //$("#contents").height($(window).height()-50);
 
 }
@@ -36,7 +36,7 @@ function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("header").style.top = "0";
   } else {
-    document.getElementById("header").style.top = "-50px";
+    document.getElementById("header").style.top = "0";
   }
 }
 

@@ -17,8 +17,8 @@ body {
   font-weight: 400;
   width: 100%;
   height: 100vh;
-  height: var(--vh);
-  height: calc(var(--vh, 1vh) * 100);
+  /*height: var(--vh);*/
+  /*height: calc(var(--vh, 1vh) * 100);*/
   word-spacing: -2px;
   letter-spacing: -0.45px;
 
@@ -26,17 +26,18 @@ body {
 
 body{
   overflow-x: hidden;
-  overflow-y: hidden;
+  /*overflow-y: hidden;*/
 }
 #wrap {
-  //height: calc(100vh - 80px);
-  border: 1px solid red;
+  /*height: calc(100vh - 80px);*/
   overflow-y: auto;
+  padding-bottom: 100px;
 }
 
 header {
   position: relative;
   min-height: 50px;
+
 }
 header.fixed {
   position: fixed;
@@ -421,6 +422,9 @@ h2.title button.more{
 footer {
   clear: both;
   display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
   justify-content: space-between;
   align-content: center;
   padding: 0 10px;
@@ -429,6 +433,7 @@ footer {
   background: #fff;
   width: 100%;
   height: 80px;
+  border: 1px solid #000;
 
 }
 footer.fixed {
