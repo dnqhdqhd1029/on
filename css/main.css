@@ -1094,14 +1094,25 @@ section.penpal-wrap .share-cont button .ic-like{
 .mybook-wrap .cont{
   width:100%;
   margin-bottom: 10px;
+  display: flex;
+  
+  justify-content: start;
+  align-items: flex-start;
+  border-bottom: 1px solid #dcdcdc;
+  padding-bottom: 10px;
+}
+.mybook-wrap .cont:last-child{
+  border-bottom: none;
 }
 
 
 
 .mybook-wrap .cont  .photo {
-  width: 100%;
-  margin-bottom: 10px;
-  height: auto;
+  width: 120px;
+  height: 90px;
+  margin-right: 10px;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .mybook-wrap .cont .photo button{
@@ -1111,24 +1122,27 @@ section.penpal-wrap .share-cont button .ic-like{
 
 .mybook-wrap .cont  .photo img {
   width: 100%;
-  height: 100%;s
+  height: 100%;
 }
 .mybook-wrap .cont .text{
+  flex: 1;
+  width: 67%;
   position: relative;
+  
 }
 .mybook-wrap .cont .txt {
   overflow: hidden;
+  width:84%;
+  
+  overflow: hidden;
+  display: block;
   text-overflow: ellipsis;
-  width: 88%;
-  height: 40px;
-  display: -webkit-box;
-  -webkit-line-clamp: 2; /* 라인수 */
-  -webkit-box-orient: vertical;
-  word-wrap: break-word;
+  word-break: break-all;
   line-height: 20px;
   text-align: left;
   margin-bottom: 10px;
   font-weight: 500;
+  white-space:nowrap;
 
 
 }
@@ -1141,6 +1155,12 @@ section.penpal-wrap .share-cont button .ic-like{
   background: #fff url("../images/ic-more.png") right -5px no-repeat;
   background-size: auto 30px;
   font-size: 0;
+}
+.mybook-wrap  div.date{
+  font-size: 12px;
+}
+.mybook-wrap  div.date b{
+  margin-right: 5px;
 }
 
 .mybook-wrap .share-cont{
@@ -1184,19 +1204,20 @@ section.penpal-wrap .share-cont button .ic-like{
   vertical-align: sub;
   width: 24px;
   height: 24px;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
+
 .mybook-wrap  .etc-cont span.view i {
-  background: url(../images/ic-eye.png) center center no-repeat;
+  background: url(../images/ic-eye.png) center 5px no-repeat;
   background-size: 24px;
 }
 .mybook-wrap  .etc-cont span.comment i {
-  background: url(../images/ic-comen.png) center center no-repeat;
+  background: url(../images/ic-comen.png)  center 3px no-repeat;
   background-size: 24px;
 }
 .mybook-wrap  .etc-cont span.like i {
-  background: url(../images/ic-like-xs.png) center center no-repeat;
+  background: url(../images/ic-like-xs.png)  center 3px no-repeat;
   background-size: 24px;
 }
 .mybook-wrap .flex-justify .share-cont button{
@@ -1240,6 +1261,7 @@ section.penpal-wrap .share-cont button .ic-like{
   justify-content: center;
   align-items: center;
   margin-right: 10px;
+  position: relative;
 }
 
 .mybook-list .list button{
@@ -1247,6 +1269,7 @@ section.penpal-wrap .share-cont button .ic-like{
   height: 60px;
   border-radius: 50%;
   overflow: hidden;
+  position: relative;
 
 }
 .mybook-list .list button img{
@@ -1280,7 +1303,16 @@ section.penpal-wrap .share-cont button .ic-like{
   top: 0;
   background: #fff;
 }
-
+.mybook-list .list  em{
+  position: absolute;
+  right: 5px;
+  top: 50px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #185fc3;
+  font-size: 0;
+}
 /*modal-cont*/
 .modal-cont{
   display: none;
@@ -1314,6 +1346,7 @@ section.penpal-wrap .share-cont button .ic-like{
   /*top: 50%;*/
   /*transform: translate(-50%, -50%);*/
   /*border: 1px solid red;*/
+ 
 }
 .modal-cont .cont button{
   width: 100%;
